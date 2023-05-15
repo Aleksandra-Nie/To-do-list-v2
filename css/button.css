@@ -1,0 +1,14 @@
+.buttons {
+    display: grid;
+    margin: 20px;
+}
+
+@media (max-width: 767px) {
+    .container__header {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        margin: 0 auto;
+    }
+}
