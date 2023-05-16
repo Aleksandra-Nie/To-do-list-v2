@@ -26,3 +26,9 @@
     background-color: rgb(60, 167, 167);
     transform: scale(1.1);
 }
+
+.button--reset {
+    display: grid;
+    margin: 20px auto 20px;
+    padding: 7px;
+}
