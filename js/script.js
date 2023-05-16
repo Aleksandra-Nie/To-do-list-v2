@@ -114,11 +114,19 @@
     }
   };
 
+  const resetForm = () => {
+    const tasks = document.querySelector(".js-tasks");
+    const buttonElements = document.querySelector(".js-buttons");
+    tasks.innerHTML = "";
+    buttonElements.innerHTML = "";
+  };
+
   const init = () => {
     render();
     const form = document.querySelector(".js-form");
 
     form.addEventListener("submit", onFormSubmit);
+    form.addEventListener("reset", resetForm);
   };
 
   init();
