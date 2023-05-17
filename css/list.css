@@ -47,3 +47,7 @@
 .list__content--done {
     text-decoration: line-through;
 }
+
+.list__item--hidden {
+    display: none;
+}

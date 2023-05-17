@@ -82,12 +82,12 @@
 
     for (const task of tasks) {
       htmlString += `
-      <li class="list__item${task.done && hideDoneTask ? " list__item--hidden" : ""
+        <li class="list__item${task.done && hideDoneTask ? " list__item--hidden" : ""
         } js-tasks">
        <button class="list__buttonTask list__buttonTask--done js-done">
        ${task.done ? " ✓ " : ""}
        </button>
-       <span class="list__content${task.done ? "list__content--done" : ""}">
+       <span class="list__content ${task.done ? "list__content--done" : ""}">
         ${task.content}
         </span>
         <button class="list__buttonTask list__buttonTask--remove js-remove">🗑</button>
@@ -123,6 +123,7 @@
 
   const init = () => {
     render();
+
     const form = document.querySelector(".js-form");
 
     form.addEventListener("submit", onFormSubmit);
@@ -130,5 +131,4 @@
   };
 
   init();
-
 }
