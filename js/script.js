@@ -1,13 +1,6 @@
 {
   const tasks = [
-    {
-      content: "zrobić obiad",
-      done: true,
-    },
-    {
-      content: "posprzątać",
-      done: false,
-    },
+
   ];
 
   let hideDoneTask = false;
@@ -51,6 +44,23 @@
       });
     });
   };
+
+  const resetButton = () => {
+    const resetElements = document.querySelector(".js-reset");
+
+    if (!tasks.length) {
+      resetElements.innerHTML = "";
+      return;
+    }
+
+    resetElements.innerHTML = `
+    <button type="reset" class="button button--reset" onClick = "reset()">Usuń wszystkie</button>
+    `;
+  };
+
+  function reset() {
+    document.getElementById("myForm").reset();
+  }
 
   const renderButton = () => {
     const buttonElements = document.querySelector(".js-buttons");
@@ -99,6 +109,7 @@
     bindEvents();
     renderButton();
     bindButtonEvents();
+    resetButton();
   };
 
   const onFormSubmit = (event) => {

@@ -34,7 +34,7 @@
         <h1>Lista zadań</h1>
     </header>
     <div class="container">
-        <form class="js-form">
+        <form id="myForm" class="js-form">
             <h2 class="form__header">Dodaj nowe zadanie</h2>
             <div class="form__container">
                 <div class="form__item"><input class="form__taskField js-newTask" type="text" name="task"
@@ -45,7 +45,9 @@
     <div class="container">
         <div class="container__header">
             <h2 class="form__header">Lista zadań</h2>
-            <button type="reset" class="button button--reset">Usuń wszystkie</button>
+            <div class="js-reset">
+
+            </div>
             <div class="buttons js-buttons"></div>
         </div>
         <ul class="form__list js-tasks"></ul>
