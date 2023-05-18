@@ -128,8 +128,10 @@
   const resetForm = () => {
     const tasks = document.querySelector(".js-tasks");
     const buttonElements = document.querySelector(".js-buttons");
+    const resetElements = document.querySelector(".js-reset");
     tasks.innerHTML = "";
     buttonElements.innerHTML = "";
+    resetElements.innerHTML = ""
   };
 
   const init = () => {
